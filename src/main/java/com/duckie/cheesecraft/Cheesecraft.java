@@ -1,5 +1,6 @@
 package com.duckie.cheesecraft;
 
+import com.duckie.cheesecraft.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -28,6 +29,8 @@ public class Cheesecraft {
 
     public Cheesecraft() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(eventBus);
 
         eventBus.addListener(this::setup);
 
